@@ -1,11 +1,307 @@
 /* Add your CSS to this file */
+
 body {
     margin: 0;
-    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "NotoSans", sans-serif;
+    font-size: 18px;
+    display: grid;
 }
 
 .container {
     margin: 0 auto;
+    align-items: right;
     max-width: 960px;
     width: 100%;
+}
+
+
+header{
+    background-color: #ffffff;
+    font-size: 18px; 
+    
+}
+
+header .container{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav{
+
+    color: #6b7280;
+    float: right;
+}
+
+nav a{
+    color: #6b7280;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+li{
+    position: relative;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    float: right;
+    flex-direction: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+li:before{
+    height: 33.33%;
+    width: 0;
+    background-color:#5A67D8;
+    content: "";
+    position: absolute;
+    right: 0;
+    z-index: 0;
+    top:33.33%;  
+    transition: all 1s;
+}
+
+li:after{
+    height: 33.33%;
+    width: 0;
+    background-color:#5A67D8;
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 0;
+    bottom: 0;
+    transition: all 1s;
+}
+
+a{
+    z-index: 1;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    padding:10px 5px;
+
+}
+
+a:before{
+    height: 33.33%;
+    width: 0;
+    content:"";
+    background-color: #5A67D8;
+    position: absolute;
+    bottom: 66.66%;
+    left: 0;
+    transition: all 1s;
+}
+
+li:hover:before,
+li:hover:after,
+li:hover a:before{
+width:100%;
+}
+
+
+header h1{
+    font-size: 18px;
+    grid-row: 5;
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+
+header h2{
+    align-items: left;
+}
+
+.overview-hero-image{
+    float: left; 
+    background-color:#b8b6b6;
+}
+
+.overview-hero-image img{
+    height:200px;
+    width:200px;
+    padding-right: 100px;
+}
+
+
+
+.overview-hero-text{
+    margin:auto 0;
+    
+}
+
+.overview-hero{
+    background-color: #b8b6b6;
+
+
+}
+
+.overview-hero .container{
+    background-blend-mode: #6b7280;
+}
+
+.overview-hero {
+    display:flex;
+}
+
+
+.card img   
+{
+  width: 280px;
+  height: 300px;
+}
+
+.card 
+{
+  width: 280px;
+  height: 580px;
+  float: left;
+  margin:5px;
+  border: 1px solid ;
+  border-radius: 5px;
+  background: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+}
+
+.cards
+ {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto auto auto;  
+}
+
+.card-body{
+    padding: 30px 20px;
+    align-items: center;
+    font-size: 18px;
+}
+
+.testing{
+    text-align: left;
+    background-color:#4A5568;
+    margin: 25px 25px;
+
+}
+
+.testing{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.testing .container{
+    display: flex;
+    padding: 20px;
+    width:100%;
+}
+
+.cta{
+    width: 200px;
+    margin: 0px 15px;
+
+}
+.testing .btn {
+    top: 20%;
+    right:27%;
+    background-color: #48BB48;
+    position: relative;
+    border-radius: 5px;
+    border: 4px solid  #48BB48;
+    transition: all 1s ease-in-out;  
+}
+
+.testing .btn:hover{
+    background: none;
+    color:white;
+}
+
+
+.learn-about{
+    text-decoration-color: #48bb78;
+    text-size-adjust: 24px;
+    grid-row: 1;
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.learn-about h2{
+    font-size: 24px;
+    color: #48bb78;
+}
+.learn-about h3{
+    color: #48BB48;
+}
+
+.testing-desciption{
+    color: white;
+}
+
+.stories img{
+    height: 170px;
+    width: 170px;
+    
+    padding: 20px;
+    margin-right: 50px;
+    border-radius: 50%;
+
+}
+
+.stories a{
+    color:#5A67D8;
+}
+
+
+.newsletter{
+    height:300px;
+    background-color: #48BB48;
+    color: white;
+    display: flex;
+    align-items: center;
+    
+}
+
+.newsletter .btn{
+    border-radius: 5px;
+    margin-left: 20px;
+    background: #5A67D8;
+    color:white;
+}
+
+.newsletter .container{
+    margin-bottom: 30px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    border-radius: 5px;
+    width: 300px;
+     height: 40px;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+}
+
+footer{
+    color: white;
+    background-color: #4A5568;
 }
